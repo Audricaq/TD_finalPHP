@@ -116,6 +116,14 @@ while($data = $sth->fetch()){
                      <a href="#" class="btn btn-primary " name="btn" ><?= $value['date_fr']; ?></a>
                      <?php if(($is_connect) == "TRUE"){
                       echo'<a href="modifierpage.php?id='.$value['id'].'" class="btn btn-warning">Modifier</a>';
+					  
+                      } ?>
+					  
+					  <a href="commenter.php?id=<?= $value['id'] ?>" class="btn btn-success" style="color:black" name="btn_commenter" >Commenter</a>
+					  <a href="affich_comments.php?id=<?= $value['id'] ?>" class="btn btn-info" style="color:black" name="btn_afficher" >Afficher commentaires</a>
+					  <?php if(($is_connect) == "TRUE"){
+                      echo'<a href="supprimer_article.php?id='.$value['id'].'" class="btn btn-danger">Supprimer</a>';
+					  
                       } ?>
                    </div>
                  </div>
